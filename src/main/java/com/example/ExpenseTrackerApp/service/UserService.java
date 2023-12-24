@@ -62,6 +62,13 @@ public class UserService {
 //	}
 
 
+	public Userr getUserById(Integer userId) {
+		// TODO Auto-generated method stub
+		return userRepository.findById(userId).orElse(null);
+//		return null;
+	}
+
+
 	
 
 //	public Userr getUser(Integer id) {

@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.ExpenseTrackerApp.entity.Entry;
+import com.example.ExpenseTrackerApp.entity.Userr;
 import com.example.ExpenseTrackerApp.repository.EntryRepository;
 
 import jakarta.transaction.Transactional;
@@ -57,6 +58,25 @@ public class EntryService {
 		entryRepository.save(e1);
 		
 		return e1;
+	}
+
+
+
+	public Userr getUserById(Integer userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+	
+
+
+
+	public List<Entry> getAllEntriesForUser(Userr user) {
+		// TODO Auto-generated method stub
+		return entryRepository.findByUser(user);
+//		return null;
 	}
 
     // Additional methods as needed
